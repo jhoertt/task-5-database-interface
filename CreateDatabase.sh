@@ -1,7 +1,9 @@
 #!bin/bash
 
 #This is the code that will create the database and populate it from our files.
-password="toor"
+
+echo "type your mysql database password"
+read password
 
 #Creating the database, the table in the database and defining it's rows
 mysql -u root -p$password -e "DROP DATABASE IF EXISTS TeamOrange; CREATE DATABASE TeamOrange; USE TeamOrange; show databases; CREATE TABLE Answers(Age INT, Pets INT, Siblings INT, Planets INT, IceCream VARCHAR(5), Date VARCHAR(30)); show tables;"
